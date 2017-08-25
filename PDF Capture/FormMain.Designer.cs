@@ -55,9 +55,9 @@ namespace PDF_Capture
             // 
             // btn_run
             // 
-            this.btn_run.Location = new System.Drawing.Point(589, 49);
+            this.btn_run.Location = new System.Drawing.Point(589, 45);
             this.btn_run.Name = "btn_run";
-            this.btn_run.Size = new System.Drawing.Size(75, 23);
+            this.btn_run.Size = new System.Drawing.Size(75, 21);
             this.btn_run.TabIndex = 1;
             this.btn_run.Text = "Run";
             this.btn_run.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@ namespace PDF_Capture
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(693, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(693, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,58 +82,58 @@ namespace PDF_Capture
             this.exportSolutionsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.sdfsdfToolStripMenuItem.Name = "sdfsdfToolStripMenuItem";
-            this.sdfsdfToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.sdfsdfToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
             this.sdfsdfToolStripMenuItem.Text = "File";
             // 
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.openFileToolStripMenuItem.Text = "Open PDF File";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
             // importSolutionsToolStripMenuItem
             // 
             this.importSolutionsToolStripMenuItem.Name = "importSolutionsToolStripMenuItem";
-            this.importSolutionsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.importSolutionsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.importSolutionsToolStripMenuItem.Text = "Import Solutions";
             this.importSolutionsToolStripMenuItem.Click += new System.EventHandler(this.importSolutionsToolStripMenuItem_Click);
             // 
             // exportSolutionsToolStripMenuItem
             // 
             this.exportSolutionsToolStripMenuItem.Name = "exportSolutionsToolStripMenuItem";
-            this.exportSolutionsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.exportSolutionsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.exportSolutionsToolStripMenuItem.Text = "Export Solutions";
             this.exportSolutionsToolStripMenuItem.Click += new System.EventHandler(this.exportSolutionsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(101, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saved Solutions:";
             // 
             // btn_modify
             // 
-            this.btn_modify.Location = new System.Drawing.Point(589, 79);
+            this.btn_modify.Location = new System.Drawing.Point(589, 73);
             this.btn_modify.Name = "btn_modify";
-            this.btn_modify.Size = new System.Drawing.Size(75, 23);
+            this.btn_modify.Size = new System.Drawing.Size(75, 21);
             this.btn_modify.TabIndex = 2;
             this.btn_modify.Text = "Modify";
             this.btn_modify.UseVisualStyleBackColor = true;
@@ -141,9 +141,9 @@ namespace PDF_Capture
             // 
             // btn_new
             // 
-            this.btn_new.Location = new System.Drawing.Point(589, 109);
+            this.btn_new.Location = new System.Drawing.Point(589, 101);
             this.btn_new.Name = "btn_new";
-            this.btn_new.Size = new System.Drawing.Size(75, 23);
+            this.btn_new.Size = new System.Drawing.Size(75, 21);
             this.btn_new.TabIndex = 3;
             this.btn_new.Text = "New";
             this.btn_new.UseVisualStyleBackColor = true;
@@ -151,9 +151,9 @@ namespace PDF_Capture
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(589, 139);
+            this.btn_delete.Location = new System.Drawing.Point(589, 128);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.Size = new System.Drawing.Size(75, 21);
             this.btn_delete.TabIndex = 4;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -170,12 +170,12 @@ namespace PDF_Capture
             this.col_desc,
             this.col_createdOn,
             this.col_createdBy});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 44);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(542, 310);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SolutionRow_Changed);
             // 
@@ -219,9 +219,9 @@ namespace PDF_Capture
             // 
             // fm_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 396);
+            this.ClientSize = new System.Drawing.Size(693, 366);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_new);
@@ -232,6 +232,7 @@ namespace PDF_Capture
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(709, 405);
             this.Name = "fm_main";
             this.Text = "PDF Capture - Console";
             this.Load += new System.EventHandler(this.main_load);

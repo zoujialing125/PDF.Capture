@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CapturedList));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.GridCapturedList = new System.Windows.Forms.DataGridView();
+            this.label_status = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btn_export = new System.Windows.Forms.ToolStripButton();
-            this.label_status = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCapturedList)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -68,6 +68,16 @@
             this.GridCapturedList.Size = new System.Drawing.Size(669, 485);
             this.GridCapturedList.TabIndex = 0;
             // 
+            // label_status
+            // 
+            this.label_status.AutoSize = true;
+            this.label_status.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_status.Location = new System.Drawing.Point(3, 499);
+            this.label_status.Name = "label_status";
+            this.label_status.Size = new System.Drawing.Size(669, 17);
+            this.label_status.TabIndex = 3;
+            this.label_status.Text = "label1";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -86,16 +96,6 @@
             this.btn_export.Size = new System.Drawing.Size(105, 22);
             this.btn_export.Text = "Export To Excel";
             this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
-            // 
-            // label_status
-            // 
-            this.label_status.AutoSize = true;
-            this.label_status.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_status.Location = new System.Drawing.Point(3, 499);
-            this.label_status.Name = "label_status";
-            this.label_status.Size = new System.Drawing.Size(669, 17);
-            this.label_status.TabIndex = 3;
-            this.label_status.Text = "label1";
             // 
             // CapturedList
             // 

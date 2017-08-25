@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Solutions>
-  <Solution id="1" name="Sample1" desc="Demonstration" createdOn="8/11/2017" createdBy="jjz052">
+  <Solution id="1" name="Demo" desc="Demonstration" createdOn="8/11/2017" createdBy="Johney Zou">
     <Parameter id="1" Display="Document Content">
       <RegExp>[\s\S]+</RegExp>
       <SortOfMatches>Ascending</SortOfMatches>

@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PDF Capture.exe" size="739232">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PDF Capture.exe" size="738304">
       <assemblyIdentity name="PDF Capture" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rnDrw0zaI7W+F9zHbj+rRyLo+lH3qyRN/iaMJ2RrYXw=</dsig:DigestValue>
+        <dsig:DigestValue>vN+xP4UEoVBuNsW9uxu1SLlOtYR/4KPujmRWDFkFEHg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -84,13 +84,13 @@
       <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Solutions.xml" size="459">
+  <file name="Solutions.xml" size="460">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AM1kouDBldGoUu7PLm5bUpM8Mqsw1O1NovueR+DR0VY=</dsig:DigestValue>
+      <dsig:DigestValue>LcRN/6sSfZyKm7joQiBK6dthKg5NF5LUzwia1UpOyVU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
