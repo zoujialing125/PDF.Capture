@@ -134,7 +134,16 @@ namespace PDF_Capture
 
             this.Text = "Captured - " + mainForm.CurrentSolution.Name;
             GridCapturedList.DataSource = dtResult;
-            label_status.Text = string.Format("Total read {0} files, {1} columns and {2} rows were loaded...", pdfTxtArray.Count(), paras.Count(), GridCapturedList.Rows.Count);
+            label_status.Text = string.Format("Total read {0} files, {1} columns and {2} rows were loaded...", pdfTxtArray.Count(), paras.Count(), GridCapturedList.Rows.Count - 1);
+        }
+
+        private void GridCapturedList_DataSourceChanged(object sender, EventArgs e)
+        {
+            DataGridView grid = sender as DataGridView;
+            foreach (DataGridViewRow row in grid.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
         }
     }
 }

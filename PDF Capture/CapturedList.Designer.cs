@@ -65,8 +65,10 @@
             this.GridCapturedList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridCapturedList.Location = new System.Drawing.Point(3, 3);
             this.GridCapturedList.Name = "GridCapturedList";
+            this.GridCapturedList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.GridCapturedList.Size = new System.Drawing.Size(669, 485);
             this.GridCapturedList.TabIndex = 0;
+            this.GridCapturedList.DataSourceChanged += new System.EventHandler(this.GridCapturedList_DataSourceChanged);
             // 
             // label_status
             // 

@@ -42,36 +42,30 @@ namespace PDF_Capture
                         List<MatchElement> matchList = new List<MatchElement>();
                         foreach (Match match in matches)
                         {
-                            MatchElement mt = new MatchElement()
+                            if (matchList.Count <= 999)
                             {
-                                Index = match.Index,
-                                Value = match.Value,
-                                Groups = new List<GroupElement>()
-                            };
-
-                            //The first group index 0 is equal to match
-                            //mt.Groups = match.Groups.Cast<Group>().Select(group =>
-                            //        new GroupElement
-                            //        {
-                            //            Index = group.Index,
-                            //            Value = group.Value
-                            //        }).ToList();
-
-                            //Start capture group from index 1
-                            if (match.Groups.Count > 1)
-                            {
-                                for (int i = 1; i <= match.Groups.Count - 1; i++)
+                                MatchElement mt = new MatchElement()
                                 {
-                                    var g = match.Groups[i];
-                                    mt.Groups.Add(new GroupElement { Index = g.Index, Value = g.Value });
-                                }
-                            }
-                            else
-                            {
-                                mt.Groups = null;
-                            }
+                                    Index = match.Index,
+                                    Value = match.Value,
+                                    Groups = new List<GroupElement>()
+                                };
 
-                            matchList.Add(mt);
+                                //Start capture group from index 1
+                                if (match.Groups.Count > 1)
+                                {
+                                    for (int i = 1; i <= match.Groups.Count - 1; i++)
+                                    {
+                                        var g = match.Groups[i];
+                                        mt.Groups.Add(new GroupElement { Index = g.Index, Value = g.Value });
+                                    }
+                                }
+                                else
+                                {
+                                    mt.Groups = null;
+                                }
+                                matchList.Add(mt);
+                            }
                         }
                         return matchList;
                     }

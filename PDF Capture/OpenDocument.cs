@@ -388,5 +388,34 @@ namespace PDF_Capture
                 formCaptureList.ShowDialog(MainForm);
             }
         }
+
+        private bool txt_result_busy = false;
+        private void txt_result_Changed(object sender, EventArgs e)
+        {
+            if (txt_result_busy) return;
+            txt_result_busy = true;
+            TextBox tb = sender as TextBox;
+            Size tS = TextRenderer.MeasureText(tb.Text, tb.Font);
+            bool Hsb = tb.ClientSize.Height < tS.Height + Convert.ToInt32(tb.Font.Size);
+            bool Vsb = tb.ClientSize.Width < tS.Width;
+
+            if (Hsb && Vsb)
+                tb.ScrollBars = ScrollBars.Both;
+            else if (!Hsb && !Vsb)
+                tb.ScrollBars = ScrollBars.None;
+            else if (Hsb && !Vsb)
+                tb.ScrollBars = ScrollBars.Vertical;
+            else if (!Hsb && Vsb)
+                tb.ScrollBars = ScrollBars.Horizontal;
+
+            sender = tb as object;
+            txt_result_busy = false;
+        }
+
+        private void txt_match_KeyUp(object sender, KeyEventArgs e)
+        {
+            Parameters_Change(sender, null);
+        }
+
     }
 }

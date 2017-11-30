@@ -73,7 +73,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.Controls.Add(this.txt_document, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.grid_parameters, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_result, 3, 1);
@@ -99,27 +99,29 @@
             this.txt_document.DetectUrls = false;
             this.txt_document.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_document.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_document.Location = new System.Drawing.Point(172, 195);
+            this.txt_document.Location = new System.Drawing.Point(171, 195);
             this.txt_document.Name = "txt_document";
             this.txt_document.ReadOnly = true;
-            this.txt_document.Size = new System.Drawing.Size(432, 323);
+            this.txt_document.Size = new System.Drawing.Size(430, 323);
             this.txt_document.TabIndex = 0;
             this.txt_document.Text = "";
             // 
             // grid_parameters
             // 
+            this.grid_parameters.AllowDrop = true;
             this.grid_parameters.AllowUserToAddRows = false;
             this.grid_parameters.AllowUserToDeleteRows = false;
+            this.grid_parameters.AllowUserToOrderColumns = true;
             this.grid_parameters.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grid_parameters.BackgroundColor = System.Drawing.Color.White;
             this.grid_parameters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_parameters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_parameters.Location = new System.Drawing.Point(172, 54);
+            this.grid_parameters.Location = new System.Drawing.Point(171, 54);
             this.grid_parameters.MultiSelect = false;
             this.grid_parameters.Name = "grid_parameters";
             this.grid_parameters.ReadOnly = true;
             this.grid_parameters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_parameters.Size = new System.Drawing.Size(432, 135);
+            this.grid_parameters.Size = new System.Drawing.Size(430, 135);
             this.grid_parameters.TabIndex = 0;
             this.grid_parameters.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridRow_Change);
             // 
@@ -130,14 +132,16 @@
             this.txt_result.BackColor = System.Drawing.SystemColors.Window;
             this.txt_result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_result.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_result.Enabled = false;
-            this.txt_result.Location = new System.Drawing.Point(610, 54);
+            this.txt_result.Location = new System.Drawing.Point(607, 54);
             this.txt_result.Multiline = true;
             this.txt_result.Name = "txt_result";
             this.txt_result.ReadOnly = true;
             this.tableLayoutPanel1.SetRowSpan(this.txt_result, 2);
-            this.txt_result.Size = new System.Drawing.Size(193, 464);
+            this.txt_result.Size = new System.Drawing.Size(192, 464);
             this.txt_result.TabIndex = 3;
+            this.txt_result.WordWrap = false;
+            this.txt_result.SizeChanged += new System.EventHandler(this.txt_result_Changed);
+            this.txt_result.TextChanged += new System.EventHandler(this.txt_result_Changed);
             // 
             // panel3
             // 
@@ -145,9 +149,9 @@
             this.panel3.Controls.Add(this.txt_exp);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(172, 3);
+            this.panel3.Location = new System.Drawing.Point(171, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(631, 45);
+            this.panel3.Size = new System.Drawing.Size(628, 45);
             this.panel3.TabIndex = 4;
             // 
             // txt_exp
@@ -157,7 +161,7 @@
             this.txt_exp.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_exp.Location = new System.Drawing.Point(0, 23);
             this.txt_exp.Name = "txt_exp";
-            this.txt_exp.Size = new System.Drawing.Size(631, 20);
+            this.txt_exp.Size = new System.Drawing.Size(628, 20);
             this.txt_exp.TabIndex = 1;
             this.txt_exp.TextChanged += new System.EventHandler(this.Parameters_Change);
             // 
@@ -166,9 +170,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(-3, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(355, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Regular Expression:";
+            this.label1.Text = "Regular Expression(Support maximum 1000 matches for each expression):";
             // 
             // panel1
             // 
@@ -195,7 +199,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.tableLayoutPanel1.SetRowSpan(this.panel1, 3);
-            this.panel1.Size = new System.Drawing.Size(159, 521);
+            this.panel1.Size = new System.Drawing.Size(158, 521);
             this.panel1.TabIndex = 1;
             // 
             // btn_runSolution
@@ -221,7 +225,7 @@
             "Descending"});
             this.txt_sortGroup.Location = new System.Drawing.Point(9, 144);
             this.txt_sortGroup.Name = "txt_sortGroup";
-            this.txt_sortGroup.Size = new System.Drawing.Size(134, 21);
+            this.txt_sortGroup.Size = new System.Drawing.Size(133, 21);
             this.txt_sortGroup.TabIndex = 5;
             this.txt_sortGroup.TextChanged += new System.EventHandler(this.Parameters_Change);
             // 
@@ -236,7 +240,7 @@
             "Descending"});
             this.txt_sortMatch.Location = new System.Drawing.Point(9, 66);
             this.txt_sortMatch.Name = "txt_sortMatch";
-            this.txt_sortMatch.Size = new System.Drawing.Size(134, 21);
+            this.txt_sortMatch.Size = new System.Drawing.Size(133, 21);
             this.txt_sortMatch.TabIndex = 3;
             this.txt_sortMatch.TextChanged += new System.EventHandler(this.Parameters_Change);
             // 
@@ -254,13 +258,18 @@
             this.txt_group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_group.Location = new System.Drawing.Point(9, 183);
+            this.txt_group.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
             this.txt_group.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             -2147483648});
             this.txt_group.Name = "txt_group";
-            this.txt_group.Size = new System.Drawing.Size(134, 20);
+            this.txt_group.Size = new System.Drawing.Size(133, 20);
             this.txt_group.TabIndex = 6;
             this.txt_group.Value = new decimal(new int[] {
             1,
@@ -274,13 +283,18 @@
             this.txt_match.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_match.Location = new System.Drawing.Point(9, 105);
+            this.txt_match.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
             this.txt_match.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
             this.txt_match.Name = "txt_match";
-            this.txt_match.Size = new System.Drawing.Size(134, 20);
+            this.txt_match.Size = new System.Drawing.Size(133, 20);
             this.txt_match.TabIndex = 4;
             this.txt_match.Value = new decimal(new int[] {
             1,
@@ -288,6 +302,7 @@
             0,
             -2147483648});
             this.txt_match.ValueChanged += new System.EventHandler(this.Parameters_Change);
+            this.txt_match.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_match_KeyUp);
             // 
             // panel2
             // 
@@ -347,7 +362,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_solutionName.Location = new System.Drawing.Point(9, 323);
             this.txt_solutionName.Name = "txt_solutionName";
-            this.txt_solutionName.Size = new System.Drawing.Size(134, 20);
+            this.txt_solutionName.Size = new System.Drawing.Size(133, 20);
             this.txt_solutionName.TabIndex = 10;
             this.txt_solutionName.TextChanged += new System.EventHandler(this.txt_solutionName_TextChanged);
             // 
@@ -375,7 +390,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_solutionDesc.Location = new System.Drawing.Point(9, 362);
             this.txt_solutionDesc.Name = "txt_solutionDesc";
-            this.txt_solutionDesc.Size = new System.Drawing.Size(134, 20);
+            this.txt_solutionDesc.Size = new System.Drawing.Size(133, 20);
             this.txt_solutionDesc.TabIndex = 11;
             // 
             // label5
@@ -411,7 +426,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_display.Location = new System.Drawing.Point(9, 26);
             this.txt_display.Name = "txt_display";
-            this.txt_display.Size = new System.Drawing.Size(134, 20);
+            this.txt_display.Size = new System.Drawing.Size(133, 20);
             this.txt_display.TabIndex = 2;
             this.txt_display.TextChanged += new System.EventHandler(this.Parameters_Change);
             // 
